@@ -13,7 +13,7 @@ import {
 // this will include all of our actions as well
 //
 // Dispatching to Reducer:
-// 1. Call an action (make an http-request to github)
+// 1. Call an action (make an http request to github)
 // 2. Get a response
 // 3. Dispatch a type back to our reducer
 const GithubState = props => {
@@ -32,7 +32,7 @@ const GithubState = props => {
 
     const res = await axios.get(
       `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-    ); // Make an async HttpRequest to get users by the search paramater ('~/users?q={}').
+    ); // Make an async HttpRequest to get users by the search parameter ('~/users?q={}').
 
     dispatch({
       type: SEARCH_USERS,
